@@ -64,21 +64,30 @@ public class LinkedList<T> {
     public String toString() {
         String ans = "";
         Node<T> n = head;
+       // Node<T> t = tail;
         ans += "(H)-->";
-        while (n != null) {
+        while (n != null) { //t != null
             ans += n.getData();
             ans += "-->";
+           // ans += t.getData();
+           // ans += "-->";
             n = n.getNext();
+           // t = t.getNext();
         }
         return ans + "(T)";
     }
 
 
     public static void main(String[] args) {
+        Node<Integer> n = new Node<>(5);
+        Node<Integer> t = new Node<>(2);
+
+        LinkedList<Integer> b = new LinkedList<>(n,t,1);
+        System.out.println("This is b" + b);
 
         LinkedList<String> a = new LinkedList<>();
 
-        a.addHead("3");a.addHead("4");
+        a.addHead("3");a.addHead("4");a.addHead("5");a.addHead("6");
         System.out.println(a);
 
 
