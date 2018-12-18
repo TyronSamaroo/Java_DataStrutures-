@@ -11,6 +11,7 @@ public class ChainedHashTable<E> implements Set<E> {
     ArrayList<E> bucket[];
 
     ChainedHashTable() {
+
         this(1000);
     }
 
@@ -30,7 +31,9 @@ public class ChainedHashTable<E> implements Set<E> {
         return size == 0;
     }
 
+
     public E get(E k) {
+
         int h = k.hashCode() % capacity;
         if (bucket[h] != null) {
             for (int i = 0; i < bucket[h].size(); i++) {
@@ -90,7 +93,7 @@ public class ChainedHashTable<E> implements Set<E> {
     }
 
     public Iterator<E> iterator() {
-        ArrayList<E> content = new ArrayList<E>();
+        ArrayList<E> content = new ArrayList<>();
         for (int i = 0; i < capacity; i++) {
             if (bucket[i] != null) {
                 for (int j = 0; j < bucket[i].size(); j++)
