@@ -24,7 +24,7 @@ public class AVLTree<K extends Comparable<K>> extends BinTree<K> implements Set<
     public void addLeft(AVLNode<K> node, K data) throws Exception {
         if (node.getLeft() != null)
             throw new Exception("Attempt to replace existing node.");
-        node.setLeft(new AVLNode<K>(node, null, null, data));
+
         size++;
         rebalance(node);  // to deal with potential balance problems above the node
     }

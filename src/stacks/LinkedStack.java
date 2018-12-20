@@ -1,5 +1,6 @@
 package stacks;
 
+import iterator.Iterator;
 import node.Node;
 
 public class LinkedStack<T> implements Stack<T>{

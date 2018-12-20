@@ -54,13 +54,25 @@ public class Testing {
   this is about the stament below
   this can also do this
   */
+public static int minIndex(int[] array){
+    int tempSmall = 0;
+    for (int i = 1; i < array.length; i++) {
+        if (array[tempSmall] > array[i] )
+            tempSmall = i;
+        }
+        return tempSmall;
+    }
+
 
 
     public static void main(String[] args) {
+        int[] array={2,4,6,5,99,3,4,1,1,155};
+
+        System.out.println("Indexof the smallest is " + minIndex(array));
+
         Testing a = new Testing(2,3);
         System.out.println(a);
         a.add(33, 66);
-
 
         System.out.println(a.add(33, 33));
         System.out.println(a);

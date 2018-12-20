@@ -1,6 +1,9 @@
 package iterator;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class IteratorExample {
@@ -8,6 +11,11 @@ public class IteratorExample {
         Stack<Integer> s = new Stack<>();
         for (int i = 1; i < 9; i++)
             s.push(i);
+
+
+        
+
+
 
         Iterator<Integer> x = s.iterator();
         while (x.hasNext())
